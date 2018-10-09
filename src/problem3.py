@@ -205,7 +205,15 @@ class Cloud(object):
         # ---------------------------------------------------------------------
         # TODO: 5. Implement and test this method.
         # ---------------------------------------------------------------------
-
+        a = self.capacity
+        b = self.water
+        self.capacity = a + another_cloud.capacity
+        if b + another_cloud.water < self.capacity:
+            self.water = b + another_cloud.water
+        else:
+            self.water = self.capacity
+        another_cloud.water = 0
+        another_cloud.capacity = 0
 
 ###############################################################################
 # The TEST functions for the  Cloud  class begin here.
