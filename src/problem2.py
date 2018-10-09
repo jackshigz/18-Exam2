@@ -109,8 +109,8 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_problem2a()
-    # run_test_problem2b()
+    run_test_problem2a()
+    run_test_problem2b()
 
 
 def run_test_problem2a():
@@ -196,10 +196,11 @@ def problem2a(triangle):
       :rtype: Triangle
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    boy = Triangle(triangle.a*2,triangle.b*2,triangle.c*2)
+    return boy
 
 def run_test_problem2b():
     """ Tests the   problem2b   function. """
@@ -358,7 +359,10 @@ def problem2b(triangles):
     #          Tests have been written for you (above).
     # IMPORTANT: See the HINT just before the DEF of this function.
     # -------------------------------------------------------------------------
-
+    sum = 0
+    for k in range(len(triangles)):
+        sum = sum + triangles[k].get_area()
+    return sum
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
