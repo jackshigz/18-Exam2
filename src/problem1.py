@@ -604,6 +604,7 @@ def problem1c(strings):
             count = count+1
     if is_prime(count) == True:
         return True
+    blah
     else:
         return False
 
